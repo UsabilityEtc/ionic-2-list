@@ -12,7 +12,9 @@
 
 ## Browser Preview
 
-After cloning the `ionic-2-list` repository, run the `ionic serve` command to preview the app in a browser. Add the `--lab` flag to see iOS and Android side by side in the browser:
+After cloning the `ionic-2-list` repository, run `npm install` to download the app's Node.js dependencies.
+
+Next, run the `ionic serve` command to preview the app in a browser. Add the `--lab` flag to see iOS and Android side by side in the browser:
 
 `ionic serve --lab`
 
