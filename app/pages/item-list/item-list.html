@@ -1,0 +1,24 @@
+<ion-navbar *navbar>
+  <ion-title>
+    List
+  </ion-title>
+  <ion-buttons end>
+    <button (tap)="addItem()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="filterQuery" (input)="filterItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items">
+      <ion-item (tap)="viewItem($event, item)">{{item.title}}</ion-item>
+      <ion-item-options ion-stop-event="click">
+        <button danger (tap)="deleteItem($event, item)">
+          <ion-icon name="trash"></ion-icon>Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
